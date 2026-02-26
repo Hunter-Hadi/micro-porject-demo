@@ -6,10 +6,12 @@ function App(props: any) {
   const user = props.user || { name: 'Guest' };
 
   return (
+    // <BrowserRouter basename={'/'}>
     <BrowserRouter basename={qiankunWindow.__POWERED_BY_QIANKUN__ ? '/product' : '/'}>
-      <div className="App">
+      <div className="sub-app-product-root App">
         <header style={{ padding: '20px', background: '#e0e0e0' }}>
-          <h1>Product App (Sub Application)</h1>
+          <h1>子应用标题 (应为红色)</h1>
+          <button>子应用按钮 (应为红色圆形)</button>
           <p>Current User: <strong>{user.name}</strong></p>
           <nav>
              <Link to="/">List</Link> | <Link to="/detail">Detail</Link>

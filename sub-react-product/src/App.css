@@ -1,8 +1,20 @@
+/* 模拟子应用全局样式 - 使用 PostCSS 自动 Namespace 隔离 */
+h1 {
+  color: red; /* 冲突点：基座是 blue */
+  font-size: 32px;
+}
+
+button {
+  background-color: red; /* 冲突点：基座是 green */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%; /* 冲突点：基座是方形 */
+  border: none;
+}
+
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
 .logo {
